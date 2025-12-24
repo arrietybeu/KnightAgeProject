@@ -1,0 +1,50 @@
+# Root level ignore for Knight Age Project
+
+# Server (Rust)
+knight-age-server/target/
+knight-age-server/**/*.rs.bk
+knight-age-server/**/*.orig
+knight-age-server/Cargo.lock
+
+# Client (Unity)
+knight-age-client/[Ll]ibrary/
+knight-age-client/[Tt]emp/
+knight-age-client/[Oo]bj/
+knight-age-client/[Bb]uild/
+knight-age-client/[Bb]uilds/
+knight-age-client/[Ll]ogs/
+knight-age-client/[Uu]ser[Ss]ettings/
+
+# Unity auto generated files
+knight-age-client/*.csproj
+knight-age-client/*.unityproj
+knight-age-client/*.sln
+knight-age-client/*.suo
+knight-age-client/*.user
+knight-age-client/*.userprefs
+knight-age-client/*.pidb
+knight-age-client/*.booproj
+knight-age-client/*.svd
+knight-age-client/*.pdb
+knight-age-client/*.opendb
+knight-age-client/*.VC.db
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
