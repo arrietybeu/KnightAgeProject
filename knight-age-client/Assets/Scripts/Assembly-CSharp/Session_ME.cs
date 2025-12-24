@@ -200,7 +200,10 @@ public class Session_ME : ISession
 						array2[i] = readKey(array2[i]);
 					}
 				}
-				return new Message(b, array2);
+				Message message = new Message(b, array2);
+				// Log read message
+				MessageLogger.Instance.LogReadMessage(b, array2);
+				return message;
 			}
 			catch (Exception ex)
 			{
@@ -262,6 +265,7 @@ public class Session_ME : ISession
 
 	public Session_ME()
 	{
+		MessageLogManager.ShowWindow(); 
 		Debug.Log("init Session_ME");
 	}
 
@@ -347,6 +351,8 @@ public class Session_ME : ISession
 	private static void doSendMessage(Message m)
 	{
 		sbyte[] data = m.getData();
+		// Log write message before sending
+		MessageLogger.Instance.LogWriteMessage(m.command, data);
 		try
 		{
 			if (getKeyComplete)
