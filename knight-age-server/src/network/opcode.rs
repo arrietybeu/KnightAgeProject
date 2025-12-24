@@ -1,221 +1,221 @@
-const MINI_GAME: u32 = -91;
+const MINI_GAME: i32 = -91;
 
-const NOKIA_PURCHASE_MESSAGE: u32 = -76;
+const NOKIA_PURCHASE_MESSAGE: i32 = -76;
 
-const GOOGLE_PURCHASE_MESSAGE: u32 = -75;
+const GOOGLE_PURCHASE_MESSAGE: i32 = -75;
 
-const UPDATE_DATA: u32 = -57;
+const UPDATE_DATA: i32 = -57;
 
-const NAP_DIAMOND: u32 = -56;
+const NAP_DIAMOND: i32 = -56;
 
-const CHECK_UPDATE_DATA: u32 = -54;
+const CHECK_UPDATE_DATA: i32 = -54;
 
-const NAP_TIEN: u32 = -53;
+const NAP_TIEN: i32 = -53;
 
-const LOAD_IMAGE_DATA_PART_CHAR: u32 = -52;
+const LOAD_IMAGE_DATA_PART_CHAR: i32 = -52;
 
-const LOAD_IMAGE: u32 = -51;
+const LOAD_IMAGE: i32 = -51;
 
-const NPC_BIG: u32 = -50;
+const NPC_BIG: i32 = -50;
 
-const LOAD_IMAGE_DATA_AUTO_EFF: u32 = -49;
+const LOAD_IMAGE_DATA_AUTO_EFF: i32 = -49;
 
-const NEW_NPC_INFO: u32 = -44;
+const NEW_NPC_INFO: i32 = -44;
 
-const DIALOG_MORE_OPTION_SERVER: u32 = -31;
+const DIALOG_MORE_OPTION_SERVER: i32 = -31;
 
-const DIALOG_SERVER: u32 = -32;
+const DIALOG_SERVER: i32 = -32;
 
-const DYNAMIC_MENU: u32 = -30;
+const DYNAMIC_MENU: i32 = -30;
 
-const MONSTER_CAPCHAR: u32 = -28;
+const MONSTER_CAPCHAR: i32 = -28;
 
-const LOGIN: u32 = 1;
+const LOGIN: i32 = 1;
 
-const LOGIN_FAIL: u32 = 2;
+const LOGIN_FAIL: i32 = 2;
 
-const MAIN_CHAR_INFO: u32 = 3;
+const MAIN_CHAR_INFO: i32 = 3;
 
-const OBJECT_MOVE: u32 = 4;
+const OBJECT_MOVE: i32 = 4;
 
-const CHAR_INFO: u32 = 5;
+const CHAR_INFO: i32 = 5;
 
-const FIRE_PK: u32 = 6;
+const FIRE_PK: i32 = 6;
 
-const MONSTER_INFO: u32 = 7;
+const MONSTER_INFO: i32 = 7;
 
-const PLAYER_EXIT: u32 = 8;
+const PLAYER_EXIT: i32 = 8;
 
-const FIRE_MONSTER: u32 = 9;
+const FIRE_MONSTER: i32 = 9;
 
-const MONSTER_FIRE: u32 = 10;
+const MONSTER_FIRE: i32 = 10;
 
-const USE_ITEM: u32 = 11;
+const USE_ITEM: i32 = 11;
 
-const CHANGE_MAP: u32 = 12;
+const CHANGE_MAP: i32 = 12;
 
-const LIST_CHAR: u32 = 13;
+const LIST_CHAR: i32 = 13;
 
-const SELECT_CHAR: u32 = 13;
+const SELECT_CHAR: i32 = 13;
 
-const CREATE_CHAR: u32 = 14;
+const CREATE_CHAR: i32 = 14;
 
-const CHAR_WEARING: u32 = 15;
+const CHAR_WEARING: i32 = 15;
 
-const CHAR_INVENTORY: u32 = 16;
+const CHAR_INVENTORY: i32 = 16;
 
-const DIE_MONSTER: u32 = 17;
+const DIE_MONSTER: i32 = 17;
 
-const DEL_ITEM: u32 = 18;
+const DEL_ITEM: i32 = 18;
 
-const ITEM_DROP: u32 = 19;
+const ITEM_DROP: i32 = 19;
 
-const GET_ITEM_MAP: u32 = 20;
+const GET_ITEM_MAP: i32 = 20;
 
-const ITEM_MORE_INFO: u32 = 21;
+const ITEM_MORE_INFO: i32 = 21;
 
-const ADD_BASE_SKILL_POINT: u32 = 22;
+const ADD_BASE_SKILL_POINT: i32 = 22;
 
-const NPC_INFO: u32 = 23;
+const NPC_INFO: i32 = 23;
 
-const BUY_ITEM: u32 = 24;
+const BUY_ITEM: i32 = 24;
 
-const ITEM_TEMPLATE: u32 = 25;
+const ITEM_TEMPLATE: i32 = 25;
 
-const CATALORY_MONSTER: u32 = 26;
+const CATALORY_MONSTER: i32 = 26;
 
-const CHAT_POPUP: u32 = 27;
+const CHAT_POPUP: i32 = 27;
 
-const GET_ITEM_TEM: u32 = 28;
+const GET_ITEM_TEM: i32 = 28;
 
-const LIST_SKILL: u32 = 29;
+const LIST_SKILL: i32 = 29;
 
-const SET_EXP: u32 = 30;
+const SET_EXP: i32 = 30;
 
-const GO_HOME: u32 = 31;
+const GO_HOME: i32 = 31;
 
-const USE_POTION: u32 = 32;
+const USE_POTION: i32 = 32;
 
-const LEVEL_UP: u32 = 33;
+const LEVEL_UP: i32 = 33;
 
-const CHAT_TAB: u32 = 34;
+const CHAT_TAB: i32 = 34;
 
-const FRIEND: u32 = 35;
+const FRIEND: i32 = 35;
 
-const BUY_SELL: u32 = 36;
+const BUY_SELL: i32 = 36;
 
-const INFO_FROM_SERVER: u32 = 37;
+const INFO_FROM_SERVER: i32 = 37;
 
-const REGISTER: u32 = 39;
+const REGISTER: i32 = 39;
 
-const BUFF: u32 = 40;
+const BUFF: i32 = 40;
 
-const DIE_PLAYER: u32 = 41;
+const DIE_PLAYER: i32 = 41;
 
-const PK: u32 = 42;
+const PK: i32 = 42;
 
-const UPDATE_PET_CONTAINER: u32 = 44;
+const UPDATE_PET_CONTAINER: i32 = 44;
 
-const PET_EAT: u32 = 45;
+const PET_EAT: i32 = 45;
 
-const PARTY: u32 = 48;
+const PARTY: i32 = 48;
 
-const OTHER_PLAYER_INFO: u32 = 49;
+const OTHER_PLAYER_INFO: i32 = 49;
 
-const EFF_PLUS_TIME: u32 = 50;
+const EFF_PLUS_TIME: i32 = 50;
 
-const CHANGE_AREA: u32 = 51;
+const CHANGE_AREA: i32 = 51;
 
-const QUEST: u32 = 52;
+const QUEST: i32 = 52;
 
-const INFO_EASY_SERVER: u32 = 53;
+const INFO_EASY_SERVER: i32 = 53;
 
-const UPDATE_STATUS_AREA: u32 = 54;
+const UPDATE_STATUS_AREA: i32 = 54;
 
-const SAVE_RMS: u32 = 55;
+const SAVE_RMS: i32 = 55;
 
-const LIST_SERVER: u32 = 56;
+const LIST_SERVER: i32 = 56;
 
-const LIST_PLAYER_PK: u32 = 57;
+const LIST_PLAYER_PK: i32 = 57;
 
-const PLAYER_SUCKHOE: u32 = 59;
+const PLAYER_SUCKHOE: i32 = 59;
 
-const CHAT_NPC: u32 = 60;
+const CHAT_NPC: i32 = 60;
 
-const NAME_SERVER: u32 = 61;
+const NAME_SERVER: i32 = 61;
 
-const X2_XP: u32 = 62;
+const X2_XP: i32 = 62;
 
-const DELETE_RMS: u32 = 63;
+const DELETE_RMS: i32 = 63;
 
-const HELP_FROM_SERVER: u32 = 64;
+const HELP_FROM_SERVER: i32 = 64;
 
-const UPDATE_CHAR_CHEST: u32 = 65;
+const UPDATE_CHAR_CHEST: i32 = 65;
 
-const REBUILD_ITEM: u32 = 67;
+const REBUILD_ITEM: i32 = 67;
 
-const THACH_DAU: u32 = 68;
+const THACH_DAU: i32 = 68;
 
-const CLAN: u32 = 69;
+const CLAN: i32 = 69;
 
-const UPDATE_HP_NPC: u32 = 70;
+const UPDATE_HP_NPC: i32 = 70;
 
-const CHAT_WORLD: u32 = 71;
+const CHAT_WORLD: i32 = 71;
 
-const REPLACE_PLUS_ITEM: u32 = 73;
+const REPLACE_PLUS_ITEM: i32 = 73;
 
-const SHOW_NUM_EFF: u32 = 74;
+const SHOW_NUM_EFF: i32 = 74;
 
-const EFF_SERVER: u32 = 75;
+const EFF_SERVER: i32 = 75;
 
-const EFF_WEATHER: u32 = 76;
+const EFF_WEATHER: i32 = 76;
 
-const REBUILD_WING: u32 = 77;
+const REBUILD_WING: i32 = 77;
 
-const OPEN_BOX: u32 = 78;
+const OPEN_BOX: i32 = 78;
 
-const PET_ATTACK: u32 = 84;
+const PET_ATTACK: i32 = 84;
 
-const MONSTER_DETONATE: u32 = 85;
+const MONSTER_DETONATE: i32 = 85;
 
-const MONSTER_SKILL_INFO: u32 = 86;
+const MONSTER_SKILL_INFO: i32 = 86;
 
-const PET_GAIN_XP: u32 = 87;
+const PET_GAIN_XP: i32 = 87;
 
-const REMOVE_ACTOR: u32 = 90;
+const REMOVE_ACTOR: i32 = 90;
 
-const IN_APP_PURCHASE: u32 = -93;
+const IN_APP_PURCHASE: i32 = -93;
 
-const USE_ITEM_ARENA: u32 = -92;
+const USE_ITEM_ARENA: i32 = -92;
 
-const STATUS_ARENA: u32 = -94;
+const STATUS_ARENA: i32 = -94;
 
-const MARKKILLER: u32 = -95;
+const MARKKILLER: i32 = -95;
 
-const SERVER_ADD_NPC: u32 = -96;
+const SERVER_ADD_NPC: i32 = -96;
 
-const USE_MOUNT: u32 = -97;
+const USE_MOUNT: i32 = -97;
 
-const USE_SHIP: u32 = -98;
+const USE_SHIP: i32 = -98;
 
-const LAST_LOGIN: u32 = -99;
+const LAST_LOGIN: i32 = -99;
 
-const KHAM_NGOC: u32 = -100;
+const KHAM_NGOC: i32 = -100;
 
-const COMPETITION: u32 = -101;
+const COMPETITION: i32 = -101;
 
-const MUA_BAN: u32 = -102;
+const MUA_BAN: i32 = -102;
 
-const INFO_MI_NUONG: u32 = -103;
+const INFO_MI_NUONG: i32 = -103;
 
-const UPDATE_INFO_CLAN_HOLD: u32 = -104;
+const UPDATE_INFO_CLAN_HOLD: i32 = -104;
 
-const HOP_RAC: u32 = -105;
+const HOP_RAC: i32 = -105;
 
-const GET_MATERITAL_TEMPLATE: u32 = -106;
+const GET_MATERITAL_TEMPLATE: i32 = -106;
 
-const USE_MATERIAL: u32 = -107;
+const USE_MATERIAL: i32 = -107;
 
-const FILL_REC_UPDATE_TIME: u32 = -108;
+const FILL_REC_UPDATE_TIME: i32 = -108;
 
-const GET_NAP_STORE_APPLE: u32 = -109;
+const GET_NAP_STORE_APPLE: i32 = -109;
