@@ -37,6 +37,7 @@ public class GlobalMessageHandler : Cmd_Message, IMessageHandler
 
 	public void onMessage(Message msg)
 	{
+		
 		switch (msg.command)
 		{
 		case -96:

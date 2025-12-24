@@ -258,12 +258,12 @@ public class Main : MonoBehaviour
 
 	private static void CreateLineMaterial()
 	{
-		if (!lineMaterial)
-		{
-			lineMaterial = new Material("Shader \"Lines/Colored Blended\" {SubShader { Pass {     Blend SrcAlpha OneMinusSrcAlpha     ZWrite Off Cull Off Fog { Mode Off }     BindChannels {      Bind \"vertex\", vertex Bind \"color\", color }} } }");
-			lineMaterial.hideFlags = HideFlags.HideAndDontSave;
-			lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
-		}
+		// if (!lineMaterial)
+		// {
+		// 	lineMaterial = new Material("Shader \"Lines/Colored Blended\" {SubShader { Pass {     Blend SrcAlpha OneMinusSrcAlpha     ZWrite Off Cull Off Fog { Mode Off }     BindChannels {      Bind \"vertex\", vertex Bind \"color\", color }} } }");
+		// 	lineMaterial.hideFlags = HideFlags.HideAndDontSave;
+		// 	lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
+		// }
 	}
 
 	private void checkInput()

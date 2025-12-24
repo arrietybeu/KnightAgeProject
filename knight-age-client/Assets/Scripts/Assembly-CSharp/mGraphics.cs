@@ -246,12 +246,12 @@ public class mGraphics
 
 	public void CreateLineMaterial()
 	{
-		if (!lineMaterial)
-		{
-			lineMaterial = new Material("Shader \"Lines/Colored Blended\" {SubShader { Pass {  Blend SrcAlpha OneMinusSrcAlpha  ZWrite Off Cull Off Fog { Mode Off }  BindChannels { Bind \"vertex\", vertex Bind \"color\", color }} } }");
-			lineMaterial.hideFlags = HideFlags.HideAndDontSave;
-			lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
-		}
+		// if (!lineMaterial)
+		// {
+		// 	lineMaterial = new Material("Shader \"Lines/Colored Blended\" {SubShader { Pass {  Blend SrcAlpha OneMinusSrcAlpha  ZWrite Off Cull Off Fog { Mode Off }  BindChannels { Bind \"vertex\", vertex Bind \"color\", color }} } }");
+		// 	lineMaterial.hideFlags = HideFlags.HideAndDontSave;
+		// 	lineMaterial.shader.hideFlags = HideFlags.HideAndDontSave;
+		// }
 	}
 
 	public void drawLine2(int x1, int y1, int x2, int y2, float r, float b, float g, float a)
