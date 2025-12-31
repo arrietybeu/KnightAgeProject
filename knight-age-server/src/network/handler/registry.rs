@@ -24,7 +24,10 @@ impl PacketRegistry {
     pub fn register<H: PacketHandler + 'static>(&mut self, handler: H) {
         let cmd = handler.command();
         let name = handler.name();
+
+        // insert packet handler vào map
         self.handlers.insert(cmd, Arc::new(handler));
+
         println!(
             "[PacketRegistry] Registered handler: {} (cmd: {} / {})",
             name,
