@@ -5,6 +5,7 @@ use crate::network::packet::reader::PacketReader;
 use crate::network::state::ConnectionState;
 use async_trait::async_trait;
 use std::io;
+use std::io::*;
 
 /// Login request data from client
 #[derive(Debug)]
@@ -27,13 +28,10 @@ pub struct LoginRequest {
     pub package_name: String,
 }
 
-/// Login packet handler
-/// Handles CMD 1 (LOGIN) from client
 pub struct CmLogin;
 
 impl CmLogin {
-    /// Parse login request from packet data
-    fn parse_login_request(reader: &mut PacketReader) -> io::Result<LoginRequest> {
+    fn parse_login_request(reader: &mut PacketReader) -> Result<LoginRequest> {
         Ok(LoginRequest {
             username: reader.read_string()?,
             password: reader.read_string()?,
@@ -74,7 +72,6 @@ impl PacketHandler for CmLogin {
         reader: &mut PacketReader,
         ctx: &PacketContext,
     ) -> io::Result<PacketHandlerResult> {
-        // Parse login request
         let request = match Self::parse_login_request(reader) {
             Ok(req) => req,
             Err(e) => {
