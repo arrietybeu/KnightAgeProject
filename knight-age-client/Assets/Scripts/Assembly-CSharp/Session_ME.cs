@@ -294,7 +294,8 @@ public class Session_ME : ISession
 		Debug.LogError("connect ...!" + connected + "  ::  " + connecting);
 		if (!connected && !connecting)
 		{
-			this.host = host;
+			// this.host = host;
+			this.host = "127.0.0.1";
 			this.port = port;
 			getKeyComplete = false;
 			sc = null;
