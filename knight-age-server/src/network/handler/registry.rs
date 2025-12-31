@@ -98,31 +98,3 @@ impl Default for PacketRegistry {
     }
 }
 
-/// Builder for packet registry
-pub struct PacketRegistryBuilder {
-    registry: PacketRegistry,
-}
-
-impl PacketRegistryBuilder {
-    pub fn new() -> Self {
-        Self {
-            registry: PacketRegistry::new(),
-        }
-    }
-
-    pub fn register<H: PacketHandler + 'static>(mut self, handler: H) -> Self {
-        self.registry.register(handler);
-        self
-    }
-
-    pub fn build(self) -> PacketRegistry {
-        self.registry
-    }
-}
-
-impl Default for PacketRegistryBuilder {
-    fn default() -> Self {
-        Self::new()
-    }
-}
-
