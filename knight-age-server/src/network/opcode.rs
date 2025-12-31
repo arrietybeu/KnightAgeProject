@@ -1,221 +1,211 @@
-const MINI_GAME: i8 = -91;
-
-const NOKIA_PURCHASE_MESSAGE: i8 = -76;
-
-const GOOGLE_PURCHASE_MESSAGE: i8 = -75;
-
-const UPDATE_DATA: i8 = -57;
-
-const NAP_DIAMOND: i8 = -56;
-
-const CHECK_UPDATE_DATA: i8 = -54;
-
-const NAP_TIEN: i8 = -53;
-
-const LOAD_IMAGE_DATA_PART_CHAR: i8 = -52;
-
-const LOAD_IMAGE: i8 = -51;
-
-const NPC_BIG: i8 = -50;
-
-const LOAD_IMAGE_DATA_AUTO_EFF: i8 = -49;
-
-const NEW_NPC_INFO: i8 = -44;
-
-const DIALOG_MORE_OPTION_SERVER: i8 = -31;
-
-const DIALOG_SERVER: i8 = -32;
-
-const DYNAMIC_MENU: i8 = -30;
-
-const MONSTER_CAPCHAR: i8 = -28;
-
-const LOGIN: i8 = 1;
-
-const LOGIN_FAIL: i8 = 2;
-
-const MAIN_CHAR_INFO: i8 = 3;
-
-const OBJECT_MOVE: i8 = 4;
-
-const CHAR_INFO: i8 = 5;
-
-const FIRE_PK: i8 = 6;
-
-const MONSTER_INFO: i8 = 7;
-
-const PLAYER_EXIT: i8 = 8;
-
-const FIRE_MONSTER: i8 = 9;
-
-const MONSTER_FIRE: i8 = 10;
-
-const USE_ITEM: i8 = 11;
-
-const CHANGE_MAP: i8 = 12;
-
-const LIST_CHAR: i8 = 13;
-
-const SELECT_CHAR: i8 = 13;
-
-const CREATE_CHAR: i8 = 14;
-
-const CHAR_WEARING: i8 = 15;
-
-const CHAR_INVENTORY: i8 = 16;
-
-const DIE_MONSTER: i8 = 17;
-
-const DEL_ITEM: i8 = 18;
-
-const ITEM_DROP: i8 = 19;
-
-const GET_ITEM_MAP: i8 = 20;
-
-const ITEM_MORE_INFO: i8 = 21;
-
-const ADD_BASE_SKILL_POINT: i8 = 22;
-
-const NPC_INFO: i8 = 23;
-
-const BUY_ITEM: i8 = 24;
-
-const ITEM_TEMPLATE: i8 = 25;
-
-const CATALORY_MONSTER: i8 = 26;
-
-const CHAT_POPUP: i8 = 27;
-
-const GET_ITEM_TEM: i8 = 28;
-
-const LIST_SKILL: i8 = 29;
-
-const SET_EXP: i8 = 30;
-
-const GO_HOME: i8 = 31;
-
-const USE_POTION: i8 = 32;
-
-const LEVEL_UP: i8 = 33;
-
-const CHAT_TAB: i8 = 34;
-
-const FRIEND: i8 = 35;
-
-const BUY_SELL: i8 = 36;
-
-const INFO_FROM_SERVER: i8 = 37;
-
-const REGISTER: i8 = 39;
-
-const BUFF: i8 = 40;
-
-const DIE_PLAYER: i8 = 41;
-
-const PK: i8 = 42;
-
-const UPDATE_PET_CONTAINER: i8 = 44;
-
-const PET_EAT: i8 = 45;
-
-const PARTY: i8 = 48;
-
-const OTHER_PLAYER_INFO: i8 = 49;
-
-const EFF_PLUS_TIME: i8 = 50;
-
-const CHANGE_AREA: i8 = 51;
-
-const QUEST: i8 = 52;
-
-const INFO_EASY_SERVER: i8 = 53;
-
-const UPDATE_STATUS_AREA: i8 = 54;
-
-const SAVE_RMS: i8 = 55;
-
-const LIST_SERVER: i8 = 56;
-
-const LIST_PLAYER_PK: i8 = 57;
-
-const PLAYER_SUCKHOE: i8 = 59;
-
-const CHAT_NPC: i8 = 60;
-
-const NAME_SERVER: i8 = 61;
-
-const X2_XP: i8 = 62;
-
-const DELETE_RMS: i8 = 63;
-
-const HELP_FROM_SERVER: i8 = 64;
-
-const UPDATE_CHAR_CHEST: i8 = 65;
-
-const REBUILD_ITEM: i8 = 67;
-
-const THACH_DAU: i8 = 68;
-
-const CLAN: i8 = 69;
-
-const UPDATE_HP_NPC: i8 = 70;
-
-const CHAT_WORLD: i8 = 71;
-
-const REPLACE_PLUS_ITEM: i8 = 73;
-
-const SHOW_NUM_EFF: i8 = 74;
-
-const EFF_SERVER: i8 = 75;
-
-const EFF_WEATHER: i8 = 76;
-
-const REBUILD_WING: i8 = 77;
-
-const OPEN_BOX: i8 = 78;
-
-const PET_ATTACK: i8 = 84;
-
-const MONSTER_DETONATE: i8 = 85;
-
-const MONSTER_SKILL_INFO: i8 = 86;
-
-const PET_GAIN_XP: i8 = 87;
-
-const REMOVE_ACTOR: i8 = 90;
-
-const IN_APP_PURCHASE: i8 = -93;
-
-const USE_ITEM_ARENA: i8 = -92;
-
-const STATUS_ARENA: i8 = -94;
-
-const MARKKILLER: i8 = -95;
-
-const SERVER_ADD_NPC: i8 = -96;
-
-const USE_MOUNT: i8 = -97;
-
-const USE_SHIP: i8 = -98;
-
-const LAST_LOGIN: i8 = -99;
-
-const KHAM_NGOC: i8 = -100;
-
-const COMPETITION: i8 = -101;
-
-const MUA_BAN: i8 = -102;
-
-const INFO_MI_NUONG: i8 = -103;
-
-const UPDATE_INFO_CLAN_HOLD: i8 = -104;
-
-const HOP_RAC: i8 = -105;
-
-const GET_MATERITAL_TEMPLATE: i8 = -106;
-
-const USE_MATERIAL: i8 = -107;
-
-const FILL_REC_UPDATE_TIME: i8 = -108;
-
-const GET_NAP_STORE_APPLE: i8 = -109;
+/// Network opcodes matching client's Cmd_Message
+#[allow(dead_code)]
+pub mod cmd {
+    // Key exchange
+    pub const KEY_EXCHANGE: i8 = -40;
+
+    // Special commands (use 4-byte length)
+    pub const LOAD_IMAGE: i8 = -51;
+    pub const LOAD_IMAGE_DATA_PART_CHAR: i8 = -52;
+    pub const CHECK_UPDATE_DATA: i8 = -54;
+
+    // Game commands
+    pub const MINI_GAME: i8 = -91;
+    pub const NOKIA_PURCHASE_MESSAGE: i8 = -76;
+    pub const GOOGLE_PURCHASE_MESSAGE: i8 = -75;
+    pub const UPDATE_DATA: i8 = -57;
+    pub const NAP_DIAMOND: i8 = -56;
+    pub const NAP_TIEN: i8 = -53;
+    pub const NPC_BIG: i8 = -50;
+    pub const LOAD_IMAGE_DATA_AUTO_EFF: i8 = -49;
+    pub const NEW_NPC_INFO: i8 = -44;
+    pub const DIALOG_MORE_OPTION_SERVER: i8 = -31;
+    pub const DIALOG_SERVER: i8 = -32;
+    pub const DYNAMIC_MENU: i8 = -30;
+    pub const MONSTER_CAPCHAR: i8 = -28;
+
+    pub const LOGIN: i8 = 1;
+    pub const LOGIN_FAIL: i8 = 2;
+    pub const MAIN_CHAR_INFO: i8 = 3;
+    pub const OBJECT_MOVE: i8 = 4;
+    pub const CHAR_INFO: i8 = 5;
+    pub const FIRE_PK: i8 = 6;
+    pub const MONSTER_INFO: i8 = 7;
+    pub const PLAYER_EXIT: i8 = 8;
+    pub const FIRE_MONSTER: i8 = 9;
+    pub const MONSTER_FIRE: i8 = 10;
+    pub const USE_ITEM: i8 = 11;
+    pub const CHANGE_MAP: i8 = 12;
+    pub const LIST_CHAR: i8 = 13;
+    pub const SELECT_CHAR: i8 = 13;
+    pub const CREATE_CHAR: i8 = 14;
+    pub const CHAR_WEARING: i8 = 15;
+    pub const CHAR_INVENTORY: i8 = 16;
+    pub const DIE_MONSTER: i8 = 17;
+    pub const DEL_ITEM: i8 = 18;
+    pub const ITEM_DROP: i8 = 19;
+    pub const GET_ITEM_MAP: i8 = 20;
+    pub const ITEM_MORE_INFO: i8 = 21;
+    pub const ADD_BASE_SKILL_POINT: i8 = 22;
+    pub const NPC_INFO: i8 = 23;
+    pub const BUY_ITEM: i8 = 24;
+    pub const ITEM_TEMPLATE: i8 = 25;
+    pub const CATALORY_MONSTER: i8 = 26;
+    pub const CHAT_POPUP: i8 = 27;
+    pub const GET_ITEM_TEM: i8 = 28;
+    pub const LIST_SKILL: i8 = 29;
+    pub const SET_EXP: i8 = 30;
+    pub const GO_HOME: i8 = 31;
+    pub const USE_POTION: i8 = 32;
+    pub const LEVEL_UP: i8 = 33;
+    pub const CHAT_TAB: i8 = 34;
+    pub const FRIEND: i8 = 35;
+    pub const BUY_SELL: i8 = 36;
+    pub const INFO_FROM_SERVER: i8 = 37;
+    pub const REGISTER: i8 = 39;
+    pub const BUFF: i8 = 40;
+    pub const DIE_PLAYER: i8 = 41;
+    pub const PK: i8 = 42;
+    pub const UPDATE_PET_CONTAINER: i8 = 44;
+    pub const PET_EAT: i8 = 45;
+    pub const PARTY: i8 = 48;
+    pub const OTHER_PLAYER_INFO: i8 = 49;
+    pub const EFF_PLUS_TIME: i8 = 50;
+    pub const CHANGE_AREA: i8 = 51;
+    pub const QUEST: i8 = 52;
+    pub const INFO_EASY_SERVER: i8 = 53;
+    pub const UPDATE_STATUS_AREA: i8 = 54;
+    pub const SAVE_RMS: i8 = 55;
+    pub const LIST_SERVER: i8 = 56;
+    pub const LIST_PLAYER_PK: i8 = 57;
+    pub const PLAYER_SUCKHOE: i8 = 59;
+    pub const CHAT_NPC: i8 = 60;
+    pub const NAME_SERVER: i8 = 61;
+    pub const X2_XP: i8 = 62;
+    pub const DELETE_RMS: i8 = 63;
+    pub const HELP_FROM_SERVER: i8 = 64;
+    pub const UPDATE_CHAR_CHEST: i8 = 65;
+    pub const REBUILD_ITEM: i8 = 67;
+    pub const THACH_DAU: i8 = 68;
+    pub const CLAN: i8 = 69;
+    pub const UPDATE_HP_NPC: i8 = 70;
+    pub const CHAT_WORLD: i8 = 71;
+    pub const REPLACE_PLUS_ITEM: i8 = 73;
+    pub const SHOW_NUM_EFF: i8 = 74;
+    pub const EFF_SERVER: i8 = 75;
+    pub const EFF_WEATHER: i8 = 76;
+    pub const REBUILD_WING: i8 = 77;
+    pub const OPEN_BOX: i8 = 78;
+    pub const PET_ATTACK: i8 = 84;
+    pub const MONSTER_DETONATE: i8 = 85;
+    pub const MONSTER_SKILL_INFO: i8 = 86;
+    pub const PET_GAIN_XP: i8 = 87;
+    pub const REMOVE_ACTOR: i8 = 90;
+
+    pub const IN_APP_PURCHASE: i8 = -93;
+    pub const USE_ITEM_ARENA: i8 = -92;
+    pub const STATUS_ARENA: i8 = -94;
+    pub const MARKKILLER: i8 = -95;
+    pub const SERVER_ADD_NPC: i8 = -96;
+    pub const USE_MOUNT: i8 = -97;
+    pub const USE_SHIP: i8 = -98;
+    pub const LAST_LOGIN: i8 = -99;
+    pub const KHAM_NGOC: i8 = -100;
+    pub const COMPETITION: i8 = -101;
+    pub const MUA_BAN: i8 = -102;
+    pub const INFO_MI_NUONG: i8 = -103;
+    pub const UPDATE_INFO_CLAN_HOLD: i8 = -104;
+    pub const HOP_RAC: i8 = -105;
+    pub const GET_MATERITAL_TEMPLATE: i8 = -106;
+    pub const USE_MATERIAL: i8 = -107;
+    pub const FILL_REC_UPDATE_TIME: i8 = -108;
+    pub const GET_NAP_STORE_APPLE: i8 = -109;
+}
+
+/// Get command name from opcode
+pub fn get_cmd_name(cmd: i8) -> &'static str {
+    match cmd {
+        cmd::KEY_EXCHANGE => "KEY_EXCHANGE",
+        cmd::LOAD_IMAGE => "LOAD_IMAGE",
+        cmd::LOAD_IMAGE_DATA_PART_CHAR => "LOAD_IMAGE_DATA_PART_CHAR",
+        cmd::CHECK_UPDATE_DATA => "CHECK_UPDATE_DATA",
+        cmd::MINI_GAME => "MINI_GAME",
+        cmd::LOGIN => "LOGIN",
+        cmd::LOGIN_FAIL => "LOGIN_FAIL",
+        cmd::MAIN_CHAR_INFO => "MAIN_CHAR_INFO",
+        cmd::OBJECT_MOVE => "OBJECT_MOVE",
+        cmd::CHAR_INFO => "CHAR_INFO",
+        cmd::FIRE_PK => "FIRE_PK",
+        cmd::MONSTER_INFO => "MONSTER_INFO",
+        cmd::PLAYER_EXIT => "PLAYER_EXIT",
+        cmd::FIRE_MONSTER => "FIRE_MONSTER",
+        cmd::MONSTER_FIRE => "MONSTER_FIRE",
+        cmd::USE_ITEM => "USE_ITEM",
+        cmd::CHANGE_MAP => "CHANGE_MAP",
+        cmd::LIST_CHAR => "LIST_CHAR",
+        cmd::CREATE_CHAR => "CREATE_CHAR",
+        cmd::CHAR_WEARING => "CHAR_WEARING",
+        cmd::CHAR_INVENTORY => "CHAR_INVENTORY",
+        cmd::DIE_MONSTER => "DIE_MONSTER",
+        cmd::DEL_ITEM => "DEL_ITEM",
+        cmd::ITEM_DROP => "ITEM_DROP",
+        cmd::GET_ITEM_MAP => "GET_ITEM_MAP",
+        cmd::ITEM_MORE_INFO => "ITEM_MORE_INFO",
+        cmd::ADD_BASE_SKILL_POINT => "ADD_BASE_SKILL_POINT",
+        cmd::NPC_INFO => "NPC_INFO",
+        cmd::BUY_ITEM => "BUY_ITEM",
+        cmd::ITEM_TEMPLATE => "ITEM_TEMPLATE",
+        cmd::CATALORY_MONSTER => "CATALORY_MONSTER",
+        cmd::CHAT_POPUP => "CHAT_POPUP",
+        cmd::GET_ITEM_TEM => "GET_ITEM_TEM",
+        cmd::LIST_SKILL => "LIST_SKILL",
+        cmd::SET_EXP => "SET_EXP",
+        cmd::GO_HOME => "GO_HOME",
+        cmd::USE_POTION => "USE_POTION",
+        cmd::LEVEL_UP => "LEVEL_UP",
+        cmd::CHAT_TAB => "CHAT_TAB",
+        cmd::FRIEND => "FRIEND",
+        cmd::BUY_SELL => "BUY_SELL",
+        cmd::INFO_FROM_SERVER => "INFO_FROM_SERVER",
+        cmd::REGISTER => "REGISTER",
+        cmd::BUFF => "BUFF",
+        cmd::DIE_PLAYER => "DIE_PLAYER",
+        cmd::PK => "PK",
+        cmd::UPDATE_PET_CONTAINER => "UPDATE_PET_CONTAINER",
+        cmd::PET_EAT => "PET_EAT",
+        cmd::PARTY => "PARTY",
+        cmd::OTHER_PLAYER_INFO => "OTHER_PLAYER_INFO",
+        cmd::EFF_PLUS_TIME => "EFF_PLUS_TIME",
+        cmd::CHANGE_AREA => "CHANGE_AREA",
+        cmd::QUEST => "QUEST",
+        cmd::INFO_EASY_SERVER => "INFO_EASY_SERVER",
+        cmd::UPDATE_STATUS_AREA => "UPDATE_STATUS_AREA",
+        cmd::SAVE_RMS => "SAVE_RMS",
+        cmd::LIST_SERVER => "LIST_SERVER",
+        cmd::LIST_PLAYER_PK => "LIST_PLAYER_PK",
+        cmd::PLAYER_SUCKHOE => "PLAYER_SUCKHOE",
+        cmd::CHAT_NPC => "CHAT_NPC",
+        cmd::NAME_SERVER => "NAME_SERVER",
+        cmd::X2_XP => "X2_XP",
+        cmd::DELETE_RMS => "DELETE_RMS",
+        cmd::HELP_FROM_SERVER => "HELP_FROM_SERVER",
+        cmd::UPDATE_CHAR_CHEST => "UPDATE_CHAR_CHEST",
+        cmd::REBUILD_ITEM => "REBUILD_ITEM",
+        cmd::THACH_DAU => "THACH_DAU",
+        cmd::CLAN => "CLAN",
+        cmd::UPDATE_HP_NPC => "UPDATE_HP_NPC",
+        cmd::CHAT_WORLD => "CHAT_WORLD",
+        cmd::REPLACE_PLUS_ITEM => "REPLACE_PLUS_ITEM",
+        cmd::SHOW_NUM_EFF => "SHOW_NUM_EFF",
+        cmd::EFF_SERVER => "EFF_SERVER",
+        cmd::EFF_WEATHER => "EFF_WEATHER",
+        cmd::REBUILD_WING => "REBUILD_WING",
+        cmd::OPEN_BOX => "OPEN_BOX",
+        cmd::PET_ATTACK => "PET_ATTACK",
+        cmd::MONSTER_DETONATE => "MONSTER_DETONATE",
+        cmd::MONSTER_SKILL_INFO => "MONSTER_SKILL_INFO",
+        cmd::PET_GAIN_XP => "PET_GAIN_XP",
+        cmd::REMOVE_ACTOR => "REMOVE_ACTOR",
+        _ => "UNKNOWN",
+    }
+}

@@ -1,41 +1,63 @@
 mod network;
 
+use crate::network::{Session, SessionManager};
 use std::error::Error;
-use tokio::sync::mpsc;
-use crate::network::packet::Packet;
+use std::sync::Arc;
 use tokio::net::TcpListener;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    starting_networking().await;
+    println!("===========================================");
+    println!("     Knight Age Server - Starting...       ");
+    println!("===========================================");
+
+    let session_manager = Arc::new(SessionManager::new());
+    let game_server_task = start_game_server(session_manager);
+
+    tokio::select! {
+        result = game_server_task => {
+            if let Err(e) = result {
+                eprintln!("Game server error: {}", e);
+            }
+        }
+    }
+
     Ok(())
 }
 
-async fn starting_networking() {
-    let listener = TcpListener::bind(("127.0.0.1", 19129)).await.expect("Failed to bind");
+async fn start_game_server(session_manager: Arc<SessionManager>) -> Result<(), Box<dyn Error>> {
+    let addr = "127.0.0.1:19129";
+    let listener = TcpListener::bind(addr).await?;
+
+    println!("[GameServer] Listening on {}", addr);
+    println!("[GameServer] Waiting for connections...");
+    println!();
 
     loop {
         match listener.accept().await {
-            Err(e) => {
-                eprintln!("Failed to accept connection: {}", e);
-                continue;
-            }
             Ok((socket, addr)) => {
+                println!("[GameServer] New connection from {}", addr);
+
                 let (read_half, write_half) = socket.into_split();
+                let mut session = Session::new(read_half, write_half, addr);
+                let session_id = session.get_id();
+                let writer = session.get_writer();
 
-                let (tx, rx): (mpsc::Sender<Packet>, mpsc::Receiver<Packet>) = mpsc::channel(100);
+                // Register session
+                let manager = session_manager.clone();
+                manager.register(session_id, writer).await;
 
-                let(hehe, hihi ): (i16, i16) = (5, 10);
-
+                // Spawn session handler
+                let manager_clone = session_manager.clone();
                 tokio::spawn(async move {
-                    // connection_reader_loop(conn_reader, tx).await;
+                    if let Err(e) = session.run().await {
+                        eprintln!("[Session {}] Error: {}", session_id, e);
+                    }
+                    manager_clone.unregister(session_id).await;
                 });
-
-                tokio::spawn(async move {
-                    // let mut session = Session::new(rx, conn_writer);
-                    // session.run().await;
-                });
-
+            }
+            Err(e) => {
+                eprintln!("[GameServer] Failed to accept connection: {}", e);
             }
         }
     }
