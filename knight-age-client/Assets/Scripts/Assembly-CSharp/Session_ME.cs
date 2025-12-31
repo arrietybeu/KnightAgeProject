@@ -265,7 +265,7 @@ public class Session_ME : ISession
 
 	public Session_ME()
 	{
-		MessageLogManager.ShowWindow(); 
+		// MessageLogManager.ShowWindow(); 
 		Debug.Log("init Session_ME");
 	}
 
@@ -295,7 +295,7 @@ public class Session_ME : ISession
 		if (!connected && !connecting)
 		{
 			this.host = host;
-			// this.host = "127.0.0.1";
+			this.host = "127.0.0.1";
 			this.port = port;
 			getKeyComplete = false;
 			sc = null;

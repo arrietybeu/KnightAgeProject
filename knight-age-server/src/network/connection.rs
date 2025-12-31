@@ -35,9 +35,9 @@ impl ConnectionReader {
     }
 
     /// Check if key has been exchanged
-    pub fn is_key_exchanged(&self) -> bool {
-        self.key_exchanged
-    }
+    // pub fn is_key_exchanged(&self) -> bool {
+    //     self.key_exchanged
+    // }
 
     /// Read a single byte and decrypt if needed
     async fn read_byte(&mut self) -> io::Result<u8> {
@@ -112,9 +112,9 @@ impl ConnectionWriter {
     }
 
     /// Check if key has been exchanged
-    pub fn is_key_exchanged(&self) -> bool {
-        self.key_exchanged
-    }
+    // pub fn is_key_exchanged(&self) -> bool {
+    //     self.key_exchanged
+    // }
 
     /// Write a single byte and encrypt if needed
     async fn write_byte(&mut self, byte: u8) -> io::Result<()> {
