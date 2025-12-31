@@ -1,38 +1,47 @@
-//! Server Message Module
-//! 
-//! This module provides a clean, organized way to build and send server packets.
-//! Similar to Java's GlobalService pattern but adapted for Rust.
-//! 
-//! # Architecture
-//! 
-//! - `ServerMessage` trait: Base trait for all server messages
-//! - `ServerService`: Helper struct for sending common packets
-//! - Individual message structs: Specific packet builders
-//! 
-//! # Usage
-//! 
+//! Server Message Module - Gửi packet từ Server → Client
+//!
+//! Module này cung cấp cách đơn giản để gửi packet về client.
+//!
+//! # Cách sử dụng
+//!
 //! ```rust
-//! // Method 1: Using ServerMessage trait
-//! let msg = SmInfoFromServer::new("Welcome!", "", 0);
+//! // Cách 1: Dùng struct có sẵn (khuyên dùng)
+//! let msg = SmInfoFromServer::info("Xin chào!");
 //! ctx.send_message(&msg).await?;
-//! 
-//! // Method 2: Using ServerService
-//! let service = ServerService::new(&ctx);
-//! service.send_info_from_server("Welcome!").await?;
-//! 
-//! // Method 3: Using ctx.send_with directly
+//!
+//! // Cách 2: Dùng ctx.send_with trực tiếp
 //! ctx.send_with(cmd::INFO_FROM_SERVER, |w| {
-//!     w.write_string("Welcome!");
-//!     w.write_string("");
-//!     w.write_i8(0);
+//!     w.write_string("Xin chào!");
+//!     w.write_string("");  // link
+//!     w.write_i8(0);       // type
 //! }).await?;
 //! ```
 
 mod traits;
-mod service;
 mod messages;
 
-pub use traits::*;
-pub use service::*;
+pub use traits::ServerMessage;
 pub use messages::*;
 
+// Re-export RebuildItemData from messages
+pub use messages::RebuildItemData;
+
+// ========== Extension để dùng ctx.send_message() ==========
+
+use crate::network::context::PacketContext;
+use std::io;
+
+/// Extension trait - thêm method send_message vào PacketContext
+#[async_trait::async_trait]
+pub trait PacketContextExt {
+    /// Gửi một ServerMessage về client
+    async fn send_message<M: ServerMessage>(&self, msg: &M) -> io::Result<()>;
+}
+
+#[async_trait::async_trait]
+impl PacketContextExt for PacketContext {
+    async fn send_message<M: ServerMessage>(&self, msg: &M) -> io::Result<()> {
+        let data = msg.build();
+        self.send(msg.command(), data).await
+    }
+}
