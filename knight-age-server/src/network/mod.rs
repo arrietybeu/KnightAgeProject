@@ -94,7 +94,7 @@ async fn start_game_server(
 
 /// Create and configure the packet registry with all handlers
 fn create_packet_registry() -> PacketRegistry {
-    let mut registry = PacketRegistry::new();
+    let mut registry = PacketRegistry::default();
 
     // Register all packet handlers here
     // Similar to your Java handler registration
