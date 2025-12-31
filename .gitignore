@@ -29,6 +29,9 @@ knight-age-client/*.pdb
 knight-age-client/*.opendb
 knight-age-client/*.VC.db
 
+# Log files
+log/
+
 # OS files
 .DS_Store
 .DS_Store?
