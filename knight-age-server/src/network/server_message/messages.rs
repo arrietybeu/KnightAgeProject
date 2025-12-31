@@ -12,7 +12,6 @@ use crate::network::server_message::service::RebuildItemData;
 
 // ========== Login Messages ==========
 
-/// Login success message (CMD 1)
 pub struct SmLoginOk {
     pub map_table: Vec<i8>,
 }

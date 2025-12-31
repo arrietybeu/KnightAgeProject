@@ -111,7 +111,7 @@ impl Default for ServerConfig {
     fn default() -> Self {
         Self {
             num_workers: num_cpus::get().max(4),
-            max_connections: 10000,
+            max_connections: 10_000,
             bind_address: "127.0.0.1:19129".to_string(),
         }
     }
