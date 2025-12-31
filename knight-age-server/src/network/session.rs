@@ -32,7 +32,7 @@ pub struct Session {
 impl Session {
     /// Create a new session from TCP stream halves
     pub fn new(read_half: OwnedReadHalf, write_half: OwnedWriteHalf, addr: SocketAddr) -> Self {
-        let id = SESSION_ID_COUNTER.fetch_add(1, Ordering::SeqCst);
+        let id = SESSION_ID_COUNTER.fetch_add(1, Ordering::Relaxed);
         let reader = ConnectionReader::new(read_half);
         let writer = create_shared_writer(ConnectionWriter::new(write_half));
         let ctx = PacketContext::new(id, addr, writer);
