@@ -32,9 +32,6 @@ knight-age-client/*.VC.db
 # Log files
 log/
 
-# Documentation
-*.md
-
 # OS files
 .DS_Store
 .DS_Store?
